@@ -1,0 +1,106 @@
+@import './_variables.scss';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    font-family: 'Roboto', sans-serif;
+    background-color: $background-color;
+}
+
+nav {
+    text-align: center;
+
+    .title {
+        color: $primary-color;
+        margin-top: 1rem;
+        cursor: pointer;
+    }
+}
+
+section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    margin-left: 5rem;
+    margin-top: 5rem;
+
+    .box {
+        width: 400px;
+        height: 300px;
+        background: rgb(55,147,231);
+        background: linear-gradient(90deg, rgba(55,147,231,1) 0%, rgba(0,192,237,1) 100%);
+
+        .box__question {
+            display: flex;
+            justify-content: center;
+
+            .box__title {
+                margin-top: 2rem;
+            }
+        }
+
+        .box__answears-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 2rem;
+
+            .box__answear {
+                background: rgb(228,178,37);
+                background: linear-gradient(90deg, rgba(228,178,37,1) 0%, rgba(255,225,73,1) 100%);
+                width: 40%;
+                margin-top: 1rem;
+                padding: 14px 0px;
+                cursor: pointer;
+            }
+
+            .box__answear:hover {
+                background-color: rgb(189, 189, 189);
+            }
+
+            .box__answear:nth-child(2) {
+                margin-left: 1rem;
+            }
+
+            .box__answear:nth-child(5) {
+                margin-left: 1rem;
+            }
+        }
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        margin-left: 3rem;
+
+        .container__button {
+            background: rgb(228,178,37);
+            background: linear-gradient(90deg, rgba(228,178,37,1) 0%, rgba(255,225,73,1) 100%);
+            border: none;
+            color: #2a2a2a;
+            font-weight: 700;
+            font-size: 20px;
+            padding: 12px 18px;
+            cursor: pointer;
+        }
+
+        .container__result {
+            margin-top: 2rem;
+            color: $primary-color;
+        }
+
+        .correct {
+            color: lightgreen;
+        }
+
+        .wrong {
+            color: red;
+        }
+    }
+}
+
